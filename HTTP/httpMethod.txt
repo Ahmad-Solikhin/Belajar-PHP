@@ -1,0 +1,20 @@
+GET digunakan untuk melakukan request data atau meminta data dari server, ini digunakan untuk menerima data
+
+HEAD sama kayak GET tapi tanpa harus membutuhkan response body atau tanpa mendapatkan datanya
+
+POST digunakan untuk mengirim data ke server
+
+PUT digunakan untuk mengganti seluruh data dari server dengan data baru yang dikirim di request, atau bisa juga dibilang override
+
+DELETE digunakan untuk menghapus data
+
+PATCH digunakan untuk mengubah sebagian data
+
+OPTIONS digunakan untuk mendeskripsikan opsi komunikasi yang tersedia, untuk bertanya ada operasi apa saja
+
+TRACE digunakan untuk debungging atau melihat log nya. Pas udah di production jangan diaktifkan TRACE nya
+
+anchor merupakan bookmark ke suatu bagian dari website
+
+HTTP Header ini berisi key dan value, ini merupakan informasi tambahan yang dapat di request tanpa harus ditaruh di body
+
