@@ -1,0 +1,23 @@
+{
+    "name": "galih/composer",
+    "description": "Belajar PHP Composer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ahmad Solikhin Gayuh Raharjo",
+            "email": "ahmadsgr39@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Code\\" : "src"
+        }
+    },
+    "require": {
+        "monolog/monolog": "2.2.0"
+    },
+    "scripts": {
+        "jalankan-server": "php -S localhost:8080",
+        "hello": "echo 'Hello World'"
+    }
+}
