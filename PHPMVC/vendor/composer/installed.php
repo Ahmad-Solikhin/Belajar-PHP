@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '86fb22dfc1495dc45cdda1c05b69788266d087ec',
+        'reference' => NULL,
         'name' => 'gayuh-raharjo/belajar-php-mvc',
         'dev' => true,
     ),
@@ -20,12 +20,12 @@
             'dev_requirement' => true,
         ),
         'gayuh-raharjo/belajar-php-mvc' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '86fb22dfc1495dc45cdda1c05b69788266d087ec',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -146,12 +146,12 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
-            'pretty_version' => '9.5.8',
-            'version' => '9.5.8.0',
+            'pretty_version' => '9.5.0',
+            'version' => '9.5.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
-            'reference' => '191768ccd5c85513b4068bdbe99bb6390c7d54fb',
+            'reference' => '8e16c225d57c3d6808014df6b1dd7598d0a5bbbe',
             'dev_requirement' => true,
         ),
         'sebastian/cli-parser' => array(

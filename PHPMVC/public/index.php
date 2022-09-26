@@ -16,9 +16,16 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 use BelajarPHPMVC\App\Router;
+use BelajarPHPMVC\Controller\HomeController;
+use BelajarPHPMVC\Controller\ProductController;
+use BelajarPHPMVC\Middleware\AuthMiddleware;
 
-Router::add('GET', '/', 'HomeController', 'index');
+Router::add('GET', '/products/([0-9a-zA-Z]*)/category/([0-9a-zA-Z]*)', ProductController::class, 'category');
 
-Router::add('GET', '/login', 'LoginController', 'login');
+Router::add('GET', '/', HomeController::class, 'index');
+
+Router::add('GET', '/hello', HomeController::class, 'hello', [AuthMiddleware::class]);
+
+Router::add('GET', '/world', HomeController::class, 'world', [AuthMiddleware::class]);
 
 Router::run();

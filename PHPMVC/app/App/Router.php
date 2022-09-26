@@ -7,13 +7,18 @@ class Router
 
     private static array $routes = [];
 
-    public static function add(string $method, string $path, string $controller, string $function): void
+    public static function add(string $method,
+                               string $path,
+                               string $controller,
+                               string $function,
+                               array $middlewares = []): void
     {
         self::$routes[] = [
             'method' => $method,
             'path' => $path,
             'controller' => $controller,
-            'function' => $function
+            'function' => $function,
+            'middlewares' => $middlewares
         ];
     }
 
@@ -27,8 +32,26 @@ class Router
         $method = $_SERVER['REQUEST_METHOD'];
 
         foreach (self::$routes as $route){
-            if($route['path'] == $path && $method == $route['method']){
-                echo "Controller : ". $route['controller'] . ' function : ' . $route['function'];
+            //Mmebuat pattern regex nya
+            $pattern = "#^" . $route['path'] . "$#";
+            if(preg_match($pattern, $path, $variables) && $method == $route['method']){
+                //Memanggil middleware
+                foreach ($route['middlewares'] as $middleware){
+                    $instance = new $middleware;
+                    $instance->before();
+                }
+
+
+                //Membuat object dari array controller dan menyimpan nama functionnya
+
+                $controller = new $route['controller']; //Mengambil string controller dan membuat object dari situ
+                $function = $route['function']; //Mengambil function dari string function
+                //$controller->$function();
+
+                //Buang nilai pertama
+                array_shift($variables);
+                //Untuk mengirim variable yang didapat bisa pake dibawah ini
+                call_user_func_array([$controller, $function], $variables);
                 return;
             }
         }
