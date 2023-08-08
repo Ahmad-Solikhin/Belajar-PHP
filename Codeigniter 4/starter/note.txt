@@ -1,0 +1,24 @@
+================================================
+ROUTES
+================================================
+Letaknya ada di app->config->routes
+Disitu buat ngatur endpoint dan nentuin function controller mana yang pengen di akses
+
+- any : apapun pathVariable akan diambil
+- num : angka tok
+- segment : apapun kecuali /
+- alpha : string tok
+- aphanum : string dan huruf
+
+Bisa tambahin environment variable di .env kek di application.properties
+
+Harus cari referensi lain buat routes atau baca dokumentasinya nanti
+
+================================================
+VIEWS
+================================================
+
+
+================================================
+MODELS
+================================================
