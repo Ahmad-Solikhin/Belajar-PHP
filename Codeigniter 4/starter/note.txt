@@ -15,7 +15,7 @@ Bisa tambahin environment variable di .env kek di application.properties
 Harus cari referensi lain buat routes atau baca dokumentasinya nanti
 
 ================================================
-VIEWS
+VIEWS LAYOUTS
 ================================================
 
 
